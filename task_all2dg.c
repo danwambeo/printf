@@ -6,9 +6,9 @@
   */
 int is_printable(char c)
 {
-	if (c >= 32 && c < 127)
-		return (1);
-	return (0);
+if (c >= 32 && c < 127)
+return (1);
+return (0);
 }
 /**
   *append_hexa_code - a func that appens ascii in hexad code to buffer
@@ -19,17 +19,17 @@ int is_printable(char c)
   */
 int append_hexa_code(char ascii_code, char buffer[], int i)
 {
-	char map_to[] = "0123456789ABCDEF";
+char map_to[] = "0123456789ABCDEF";
 
-	if (ascii_code < 0)
-		ascii_code *= -1;
-	buffer[i++] '\\';
-	buffer[i++] = 'x';
+if (ascii_code < 0)
+ascii_code *= -1;
+buffer[i++] '\\';
+buffer[i++] = 'x';
 
-	buffer[i++] = map_to[ascii_code / 16];
-	buffer[i] = map_to[ascii_code % 16];
+buffer[i++] = map_to[ascii_code / 16];
+buffer[i] = map_to[ascii_code % 16];
 
-	return (3);
+return (3);
 }
 /**
   *is_digit - a func that verify if an int is there
@@ -38,9 +38,9 @@ int append_hexa_code(char ascii_code, char buffer[], int i)
   */
 int is_digit(char c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+if (c >= '0' && c <= '9')
+return (1);
+return (0);
 }
 /**
   *convert_size_number - a function that casts a number to the specified size
@@ -50,11 +50,11 @@ int is_digit(char c)
   */
 long int convert_size_number(long int num, int size)
 {
-	if (size == S_LONG)
-		return (num);
-	else if (size == S_SHORT)
-		return ((short)num);
-	return ((int)num);
+if (size == S_LONG)
+return (num);
+else if (size == S_SHORT)
+return ((short)num);
+return ((int)num);
 }
 /**
   *convert_size_unsgnd - a func that cast no to specified size
@@ -64,9 +64,9 @@ long int convert_size_number(long int num, int size)
   */
 long int convert_size_unsgnd(unsigned long int num, int size)
 {
-	if (size == S_LONG)
-		return (num);
-	else if (size == S_SHORT)
-		return ((unsigned short)num);
-	return ((unsigned int)num);
+if (size == S_LONG)
+return (num);
+else if (size == S_SHORT)
+return ((unsigned short)num);
+return ((unsigned int)num);
 }
