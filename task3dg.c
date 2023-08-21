@@ -30,7 +30,7 @@ if (fmt_types[a].fmt == '\0')
 if (fmt[*ind] == '\0')
 return (-1);
 un_leng += write(1, "%%", 1);
-if (fmt[*ind -1] == ' ')
+if (fmt[*ind - 1] == ' ')
 un_leng += write(1, " ", 1);
 else if (width)
 {
