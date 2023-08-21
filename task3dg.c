@@ -27,14 +27,17 @@ if (fmt[*ind] == fmt_types[a].fmt)
 return (fmt_types[a].fn(list, buffer, flags, width, precision, size));
 if (fmt_types[a].fmt == '\0')
 {
-if (fmt[*ind - 1] == ' ')
+if (fmt[*ind] == '\0')
+return (-1);
+un_leng += write(1, "%%", 1);
+if (fmt[*ind -1] == ' ')
 un_leng += write(1, " ", 1);
 else if (width)
 {
 --(*ind);
 while (fmt[*ind] != ' ' && fmt[*ind] != '%')
---(ind);
-if (fmt[*ind] != ' ')
+--(*ind);
+if (fmt[*ind] == ' ')
 --(*ind);
 return (1);
 }
